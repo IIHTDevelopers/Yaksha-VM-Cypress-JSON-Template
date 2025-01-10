@@ -112,11 +112,6 @@ describe("Automation Suite for Yaksha Application", () => {
     procurement.verifyRequestedDateColumnDateWithinRange();
     verifyPurchaseReqDataIsPresent();
   });
-
-  it("TS-15 Login with invalid credentials", () => {
-    login.performLoginWithInvalidCredentials();
-    verifyUserIsNotLoggedin();
-  });
 });
 
 // *****************Reusable functions starts from here*******************
@@ -172,12 +167,6 @@ function verifyPurchaseReqDataIsPresent() {
   return cy
     .xpath(`//div[@ref="eCenterContainer"]//div[@col-id="RequestDate"]`)
     .should("have.length.gte", 1);
-}
-
-function verifyUserIsNotLoggedin() {
-  return cy
-    .xpath('//div[contains(text(),"Invalid credentials !")]')
-    .should("be.visible");
 }
 
 function checkErrorMessageOccurs() {

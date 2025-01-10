@@ -17,18 +17,6 @@ class LoginPage {
   performLogin() {
     // write your logic here
   }
-
-  /**
-    * @Test15 Performs login with invalid credentials and validates error message.
-    *
-    * @description This method navigates to the login page, logs out if a session is active, and attempts to log in using 
-    *              invalid credentials retrieved from the test data. After entering the invalid username and password, it 
-    *              asserts that the appropriate error message is displayed, ensuring proper handling of invalid login attempts.
-    * @returns {void} - This method does not return a value but performs assertions to validate the test.
-    */
-  performLoginWithInvalidCredentials() {
-    // write your logic here
-  }
 }
 
 export default LoginPage;

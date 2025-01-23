@@ -109,8 +109,11 @@ describe("Automation Suite for Yaksha Application", () => {
   });
 
   it("TS-14 Verify logout functionality from Admin dropdown", async () => {
-    loginPage.verifyLogoutFunctionality();
-    verifyUserIsLoggedOut();
+    cy.wrap(null).then(() => {
+      login.verifyLogoutFunctionality();
+    }).then(() => {
+      verifyUserIsLoggedOut();
+    });
   });
 });
 

@@ -108,7 +108,7 @@ describe("Automation Suite for Yaksha Application", () => {
     verifyPurchaseReqDataIsPresent();
   });
 
-  it("TS-14 Verify logout functionality from Admin dropdown", async () => {
+  it("TS-14 Verify logout functionality from Admin dropdown", () => {
     cy.wrap(null).then(() => {
       login.verifyLogoutFunctionality();
     }).then(() => {
